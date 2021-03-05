@@ -19,7 +19,7 @@ go run $(go env GOPATH)/src/github.com/jperelshteyn/syndio_hw/main.go [-port] [-
 ```
 
 ### Optional Flags
-- -port: local port to serve HTTP requests (defaults to 8888)
+- -port: local port to serve HTTP requests (defaults to `PORT` environment variable)
 - -seed_db: cleans and fills DB with seed employee data (defaults to false)
 - -db_path: path to SQLite DB file, which gets created if does not exist (defaults to current working directory)
 

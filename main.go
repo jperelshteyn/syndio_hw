@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strconv"
 
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -93,7 +94,8 @@ func main() {
 	var port int
 	var dbPath string
 	var seed bool
-	flag.IntVar(&port, "port", 8888, "Port number for serving HTTP requests")
+	port, _ = strconv.Atoi(os.Getenv("PORT"))
+	flag.IntVar(&port, "port", port, "Port number for serving HTTP requests")
 	if port < 0 || port > 65353 {
 		panic(fmt.Sprintf("invalid port number, expecting between 0 and 65353, but got %d", port))
 	}
