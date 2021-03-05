@@ -25,5 +25,5 @@ go run $(go env GOPATH)/src/github.com/jperelshteyn/syndio_hw/main.go [-port] [-
 
 ## Access API
 ```bash
-curl localhost:8888/employees
+curl localhost:$PORT/employees
 ```
