@@ -64,7 +64,7 @@ func createDbSchema(db *sql.DB) error {
 	employees := `
         CREATE TABLE IF NOT EXISTS employees (
             id INT PRIMARY KEY,        
-            gender TEXT
+            gender TEXT NOT NULL
         );`
 	if _, err := db.Exec(employees); err != nil {
 		return fmt.Errorf("failed to create employees table: %s", err)
