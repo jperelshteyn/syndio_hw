@@ -15,7 +15,7 @@ go get github.com/jperelshteyn/syndio_hw
 
 ## Usage
 ```bash
-go run $(go env GOPATH)/main.go [-port] [-seed_db] [-db_path]
+go run $(go env GOPATH)/src/github.com/jperelshteyn/syndio_hw/main.go [-port] [-seed_db] [-db_path]
 ```
 
 ### Optional Flags
